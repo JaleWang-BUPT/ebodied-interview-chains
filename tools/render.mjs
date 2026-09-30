@@ -83,7 +83,7 @@ footer div{max-width:840px;margin:0 auto;padding:18px;color:var(--mut);font-size
 .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:14px 0}
 .card h2{border:none;margin:0 0 6px}
 .meta{color:var(--mut);font-size:14px}
-@media(max-width:640px){main{padding:18px 12px 60px}summary{font-size:15.5px}}
+@media(max-width:640px){main{padding:18px 12px 60px}summary{font-size:15.5px;padding-right:64px}summary::after{top:4px}}
 `;
 
 function page(title, body, rel) {
