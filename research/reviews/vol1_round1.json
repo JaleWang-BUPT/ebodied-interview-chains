@@ -1,0 +1,32 @@
+{
+  "target": "volumes/vol1_vla_il.md",
+  "round": 1,
+  "date": "2026-09-30",
+  "reviewer": "独立审查代理（fresh thread，与执行代理不同上下文）",
+  "verdict": "WARN",
+  "verified_by_reviewer": [
+    "π0 / π0.5 / π0.6 / OpenVLA / flow matching 数学 / Qwen2-VL 等硬事实全部核对无误",
+    "抽验 4 个实录 URL（牛客 7b8f541c、CSDN 162309012、GitHub offerseed #6、GitHub Cgxiaoxin 面试复盘）全部真实且与链内容吻合"
+  ],
+  "blocking_issues": [
+    "C06 主答：ACT 误写为'transformer 自回归式输出整段 chunk'——实为一次前向并行输出（已修）",
+    "C16 追问1：(24-5+2)/2+1=11.5 误写为 12.5（已修）",
+    "卷首统计：62 节点/9 来源与实际不符（已改为 53 节点/20 来源并写明计数规则）",
+    "规则6：C09/C15 实录行缺 URL，C01/C03/C10/C11 部分来源缺 URL（已全部补齐）"
+  ],
+  "warnings_applied": [
+    "跨链口径统一：C01 推理频率限定（token 类 1-6Hz vs π0 50Hz）、C02 ⑤延迟表述、C02 易错 DDIM 确定性、C03 优化器 12 字节/参数、C11 Adam 懒分配表述、C09 OpenVLA ~6Hz 论文口径",
+    "推断标注行内化：C04 追问1步骤/追问2、C10 trials 数字、C13 追问1与规模、C16 追问1",
+    "C13 latent 1-2B 改为'面试官追问口径、无确认答案〔推断〕'",
+    "C06 追问顺序对齐题单（BC 区别先于 collapse）并附注'多步采样慢'层去向",
+    "C16 追问顺序对齐题单（最慢→SFT→加速）",
+    "C05 频次口径：补齐 4 个独立来源使 🔥×4 成立；C15 标注知乎为语境不计频",
+    "C07 DDIM 补'相同边缘分布'半句；C05 量化误差表述修正；C14 注明跨卷借用"
+  ],
+  "pending_human_verification": [
+    "TL 系列 4 篇（lovely_yoshino）是否逐篇覆盖 C05/C06/C09/C11 对应追问层（审查员未能逐篇打开）",
+    "C13 latent 模块规模（实录仅见面试官追问，无确认答案）"
+  ],
+  "rounds": 1,
+  "outcome": "全部 blocking 已修复，进入渲染发布"
+}
